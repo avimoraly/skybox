@@ -1,8 +1,9 @@
-<table style="width:100%; background-color:#f7f8fa; color:#9db5d3" ngif="this.dataMatrix && this.dataMatrix[0]">
+<table ngif="this.dataMatrix && this.dataMatrix[0]">
   <tr *ngFor="let rowData of this.dataMatrix; let isFirstRow = first; let row = index">
     <td *ngFor="let cellData of rowData; let isFirstCol = first; let col = index" class="middleCell "
-      (mouseenter) ="hoverRow = row;hoverCol = col"  (mouseleave) ="hoverRow = null;hoverCol = null"
+      (mouseenter) ="hoverRow = row; hoverCol = col"  (mouseleave) ="hoverRow = null;hoverCol = null"
       [ngClass]="{
+        'firstRow':  isFirstRow,
         'relatedHover':  isRelatedHover(row, col),
         'withDiagonal': isFirstRow && isFirstCol,
         'middleCell': !isFirstRow && !isFirstCol}">

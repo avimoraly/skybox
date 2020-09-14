@@ -1,11 +1,17 @@
 .meter {
-	height: 12px;
+	height: 9px;
   position: relative;
-  background: red;
+  background: #c52f2e;
+  margin: 3px 0px;
 }
 
 .meter > span {
   display: block;
   height: 100%;
-  background-color: rgb(43,194,83);
+  background-color: #86d882;
+}
+
+.section {
+  box-sizing: border-box;
+  padding: 0 4px;
 }
