@@ -1,10 +1,20 @@
 :host {
   font-family: Helvetica, Arial, sans-serif;
+  >div {
+    border: 2px solid #cfd0d1;
+    padding:0
+  }
   table {
     width:100%;
     background-color:#f7f8fa;
     color:#607d98;
     table-layout: fixed;
+    caption {
+      background-color:#f7f8fa;
+      border: 1px solid #cfd0d1;
+      padding:5px;
+      margin-bottom: 2px;
+    }
   }
   table, td {
     border: 1px solid #cfd0d1;
@@ -35,12 +45,6 @@
 
     }
   }
-
-  // hr{
-  //   // pos
-  //   transform: rotate(45deg);
-  //   width: 100px;
-  // }
 
   .withDiagonal {
     font-size: 14px;
