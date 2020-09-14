@@ -1,0 +1,26 @@
+@font-face {
+    font-family: "skyicon";
+    src: url("./skyicon.eot?759aa0fdfae06f4d465b7badefa12e17?#iefix") format("embedded-opentype"),
+url("./skyicon.woff2?759aa0fdfae06f4d465b7badefa12e17") format("woff2"),
+url("./skyicon.woff?759aa0fdfae06f4d465b7badefa12e17") format("woff"),
+url("./skyicon.ttf?759aa0fdfae06f4d465b7badefa12e17") format("truetype"),
+url("./skyicon.svg?759aa0fdfae06f4d465b7badefa12e17#skyicon") format("svg");
+}
+
+i[class^="sky-"]:before, i[class*=" sky-"]:before {
+    font-family: skyicon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.sky-documentAdd:before {
+    content: "\f101";
+}
+.sky-toxic:before {
+    content: "\f102";
+}

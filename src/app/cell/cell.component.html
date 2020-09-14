@@ -1,0 +1,8 @@
+<div >
+  <div class="meter">
+    <span [style.width.%]="section.complianceLevel"></span>
+  </div>
+  <i class="sky-documentAdd"></i> {{section.complianceLevel || 0}}% <br>
+  <i class="sky-toxic"></i> {{section.violationsCount}}
+</div>
+

@@ -1,0 +1,26 @@
+<table style="width:100%; background-color:#f7f8fa; color:#9db5d3" ngif="this.dataMatrix && this.dataMatrix[0]">
+  <tr *ngFor="let rowData of this.dataMatrix; let isFirstRow = first; let row = index">
+    <td *ngFor="let cellData of rowData; let isFirstCol = first; let col = index" class="middleCell "
+      (mouseenter) ="hoverRow = row;hoverCol = col"  (mouseleave) ="hoverRow = null;hoverCol = null"
+      [ngClass]="{
+        'relatedHover':  isRelatedHover(row, col),
+        'withDiagonal': isFirstRow && isFirstCol,
+        'middleCell': !isFirstRow && !isFirstCol}">
+      <span *ngIf="cellData; else empty" >
+        <span *ngIf="isFirstRow" class="colName"> {{cellData.name}}</span>
+        <app-cell-zone *ngIf="isFirstCol"  [zone]="cellData" ></app-cell-zone>
+        <app-cell *ngIf="!isFirstRow && !isFirstCol"  [section]="cellData"></app-cell>
+      </span>
+
+      <ng-template #empty >
+        <div *ngIf="isFirstRow && isFirstCol" >
+          <span class="destination">Destination</span>
+          <span class="source">Source</span>
+        </div>
+      </ng-template>
+      <!-- row: {{hoverRow}} /  col: {{hoverCol}} -->
+    </td>
+
+    <!-- <th colspan="2">Telephone</th> -->
+  </tr>
+</table>

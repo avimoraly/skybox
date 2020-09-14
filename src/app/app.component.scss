@@ -1,0 +1,42 @@
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+td.relatedHover {
+  background-color: rgba(43,204,174,0.2);
+}
+
+
+td.middleCell {
+  &:hover {
+    //
+    background-color: rgba(43,204,174,0.7);
+
+  }
+}
+
+// hr{
+//   // pos
+//   transform: rotate(45deg);
+//   width: 100px;
+// }
+
+.withDiagonal {
+  position: relative;
+  background: linear-gradient(to top right, #fff calc(50% - 1px), #aaa, #fff calc(50% + 1px) )
+}
+
+.destination {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.source {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
